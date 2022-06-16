@@ -75,9 +75,9 @@ function App() {
 						<Route path='/' element={<Homepage />} />
 						<Route
 							path='/Classes'
-							element={<ClassSelector classes={classes}/>}
+							element={<ClassSelector classes={classes} />}
 						/>
-						<Route path='/Races' element={<RaceSelector />} />
+						<Route path='/Races' element={<RaceSelector races={races} />} />
 						<Route path='/Backgrounds' element={<BackgroundsSelector />} />
 						<Route path={`/${currentChar}`} element={<CurrentCharDisplay />} />
 						<Route path='/Characters' element={<AllCharsDisplay />} />

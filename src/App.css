@@ -39,7 +39,12 @@ main {
   border: 1px solid black;
 }
 
-
+.classes-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  
+}
 
 
 
