@@ -17,6 +17,7 @@ function App() {
   const [allChars, setAllChars] = useState([])
 
   const [classes, setClasses] = useState([]);
+  const [races, setRaces] = useState([]);
 
 	useEffect(() => {
 		const classesUrl = `${BASE_URL}classes/`;
@@ -26,9 +27,34 @@ function App() {
 			})
 			.then((res) => {
 				setClasses(res.results);
-				console.log(classes);
 			});
+
+
+
+
+      const racesUrl = `${BASE_URL}races/`;
+			fetch(racesUrl)
+				.then((res) => {
+					return res.json();
+				})
+				.then((res) => {
+					setRaces(res.results);
+				});
+
+
+
+
 	}, []);
+
+
+
+
+
+
+
+
+
+
 
   return (
 		<div>
@@ -38,7 +64,7 @@ function App() {
 			<main>
 				<nav>
 					<ul className='main-navs'>
-						<Link to='/Class'>
+						<Link to='/Classes'>
 							<li>Character creator</li>
 						</Link>
 						<li>Characters</li>
@@ -48,11 +74,11 @@ function App() {
 					<Routes>
 						<Route path='/' element={<Homepage />} />
 						<Route
-							path='/Class'
+							path='/Classes'
 							element={<ClassSelector classes={classes}/>}
 						/>
-						<Route path='/Race' element={<RaceSelector />} />
-						<Route path='/Background' element={<BackgroundsSelector />} />
+						<Route path='/Races' element={<RaceSelector />} />
+						<Route path='/Backgrounds' element={<BackgroundsSelector />} />
 						<Route path={`/${currentChar}`} element={<CurrentCharDisplay />} />
 						<Route path='/Characters' element={<AllCharsDisplay />} />
 					</Routes>
