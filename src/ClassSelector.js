@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 function ClassSelector({ classes, setCurrentChar, currentChar }) {
 	function handleClick(event) {
-		console.log(event.target)
-		setCurrentChar({class: event.target.id });
+		const link = event.target.closest('.class-card')
+		setCurrentChar({ ...currentChar, class: link.id });
 	}
 
 	return (
