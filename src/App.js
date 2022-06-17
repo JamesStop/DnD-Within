@@ -59,7 +59,9 @@ function App() {
   return (
 		<div>
 			<header>
-				<h1>DnD Within</h1>
+				<Link to='/'>
+					<h1>DnD Within</h1>
+				</Link>
 			</header>
 			<main>
 				<nav>
@@ -70,7 +72,7 @@ function App() {
 						<li>Characters</li>
 					</ul>
 				</nav>
-				<div>
+				<div className='display-wrapper'>
 					<Routes>
 						<Route path='/' element={<Homepage />} />
 						<Route

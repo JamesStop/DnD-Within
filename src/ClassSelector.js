@@ -5,8 +5,8 @@ function ClassSelector({ classes }) {
 		<div className='classes-container'>
 			{classes.map((singleClass) => {
 				return (
-					<div className='' key={singleClass.index}>
-						{singleClass.name}
+					<div className='class-card' key={singleClass.index}>
+						<span>{singleClass.name}</span>
 					</div>
 				);
 			})}
