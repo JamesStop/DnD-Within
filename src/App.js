@@ -22,7 +22,7 @@ function App() {
 
 
 
-  	const [currentChar, setCurrentChar] = useState({})
+  	const [currentChar, setCurrentChar] = useState(BLANK_CHAR);
   	const [allChars, setAllChars] = useState([])
 
   	const [classes, setClasses] = useState([]);
@@ -90,6 +90,7 @@ function App() {
 								<ClassSelector
 									classes={classes}
 									setCurrentChar={setCurrentChar}
+									currentChar={currentChar}
 								/>
 							}
 						/>
