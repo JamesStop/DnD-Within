@@ -1,4 +1,7 @@
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 header {
   min-height: 100px;
@@ -11,11 +14,6 @@ header {
 
 }
 
-
-header a {
-  text-decoration: none;
-  color: black;
-}
 
 h1 {
   font-size: 50px;
@@ -40,8 +38,6 @@ main {
 }
 
 .main-navs a {
-  text-decoration: none;
-  color: black;
   height: 100%;
   /* border: 1px solid black; */
   display: flex;
@@ -68,6 +64,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
 }
 
 @media screen and (max-width: 800px) {

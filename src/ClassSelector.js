@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-function ClassSelector({ classes }) {
+function ClassSelector({ classes, setCurrentChar }) {
+
+
+
 	return (
 		<div className='classes-container'>
 			{classes.map((singleClass) => {
 				return (
-					<div className='class-card' key={singleClass.index}>
-						<span>{singleClass.name}</span>
-					</div>
+					<Link className='class-card'  to='/Races'>
+						<div key={singleClass.index}>
+							<span>{singleClass.name}</span>
+						</div>
+					</Link>
 				);
 			})}
 		</div>

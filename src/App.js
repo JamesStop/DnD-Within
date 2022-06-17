@@ -11,13 +11,22 @@ import CurrentCharDisplay from "./CurrentCharDisplay";
 
 function App() {
 
-  const BASE_URL = 'https://www.dnd5eapi.co/api/'
+  	const BASE_URL = 'https://www.dnd5eapi.co/api/'
+  	const BLANK_CHAR = {
+		name: '',
+		level: 1,
+		class: {},
+		race: {},
+		background: {},
+	  }
 
-  const [currentChar, setCurrentChar] = useState({})
-  const [allChars, setAllChars] = useState([])
 
-  const [classes, setClasses] = useState([]);
-  const [races, setRaces] = useState([]);
+
+  	const [currentChar, setCurrentChar] = useState({})
+  	const [allChars, setAllChars] = useState([])
+
+  	const [classes, setClasses] = useState([]);
+  	const [races, setRaces] = useState([]);
 
 	useEffect(() => {
 		const classesUrl = `${BASE_URL}classes/`;
@@ -77,7 +86,12 @@ function App() {
 						<Route path='/' element={<Homepage />} />
 						<Route
 							path='/Classes'
-							element={<ClassSelector classes={classes} />}
+							element={
+								<ClassSelector
+									classes={classes}
+									setCurrentChar={setCurrentChar}
+								/>
+							}
 						/>
 						<Route path='/Races' element={<RaceSelector races={races} />} />
 						<Route path='/Backgrounds' element={<BackgroundsSelector />} />
