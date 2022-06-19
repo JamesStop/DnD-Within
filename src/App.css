@@ -52,6 +52,8 @@ main {
   align-items: center;
 }
 
+/* class page */
+
 .classes-container {
   height: 80%;
   width: 80%;
@@ -86,7 +88,12 @@ main {
      }
 }
 
-
+.class-info-modal {
+  position: fixed;
+  background-color: rgba(145, 12, 12, 0.5);
+  height: 50%;
+  width: 50%;
+}
 
 
 

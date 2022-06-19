@@ -15,7 +15,7 @@ function App() {
   	const BLANK_CHAR = {
 		name: '',
 		level: 1,
-		class: {},
+		class: null,
 		race: {},
 		background: {},
 	  }
