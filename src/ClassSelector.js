@@ -23,7 +23,10 @@ function ClassSelector({ classes, setCurrentChar, currentChar }) {
 					);
 				})}
 			</div>
-			<ClassInfoModal currentChar={currentChar} />
+			<ClassInfoModal
+				currentChar={currentChar}
+				setCurrentChar={setCurrentChar}
+			/>
 		</>
 	);
 }
