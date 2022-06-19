@@ -13,16 +13,13 @@ function ClassSelector({ classes, setCurrentChar, currentChar }) {
 			<div className='classes-container'>
 				{classes.map((singleClass) => {
 					return (
-						<Link
+						<div
 							className='class-card'
-							to='/Races'
-							onClick={handleClick}
 							key={singleClass.index}
-							id={singleClass.index}>
-							<div>
-								<span>{singleClass.name}</span>
-							</div>
-						</Link>
+							id={singleClass.index}
+							onClick={handleClick}>
+							<span>{singleClass.name}</span>
+						</div>
 					);
 				})}
 			</div>
