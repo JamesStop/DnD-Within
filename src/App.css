@@ -113,6 +113,24 @@ main {
   width: 100%;
   height: 15%;
   border-bottom: 1px solid black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-modal-button {
+  height: 80%;
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  right: 10px;
+  font-size: 150%;
+  border: none
+}
+
+.modal-title {
+  font-size: 200%;
 }
 
 .modal-body-wrapper {
@@ -126,7 +144,12 @@ main {
   height: 15%;
 }
 
-
+.choose-button {
+  height: 100%;
+  width: 100%;
+  font-size: 150%;
+  border: none;
+}
 
 
 
