@@ -8,12 +8,19 @@ function ClassInfoModal({ currentChar, setCurrentChar }) {
 
 	if (currentChar.class) {
 		return (
-			<div className='class-info-modal'>
-				<button onClick={cancelClass}>close</button>
-				{currentChar.class}
-				<Link to='/Races'>
-					<button>choose</button>
-				</Link>
+			<div className='info-modal'>
+				<section className='modal-info'>
+					<div className='modal-head-wrapper'>
+						<button onClick={cancelClass}>close</button>
+						{currentChar.class}
+					</div>
+					<div className='modal-body-wrapper'></div>
+					<div className='modal-foot-wrapper'>
+						<Link to='/Races'>
+							<button>choose</button>
+						</Link>
+					</div>
+				</section>
 			</div>
 		);
 	} else {
