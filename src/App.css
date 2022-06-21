@@ -54,7 +54,7 @@ main {
 
 /* class page */
 
-.classes-container {
+.classes-container, .races-container {
   height: 80%;
   width: 80%;
   display: grid;
@@ -62,7 +62,7 @@ main {
   gap: 12.5%;
 }
 
-.class-card {
+.class-card, .race-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@ main {
 }
 
 @media screen and (max-width: 800px) {
-  .classes-container {
+  .classes-container, .races-container {
     height: 80%;
     width: 80%;
     display: flex;
@@ -79,7 +79,7 @@ main {
     align-items: center;
     gap: 0;
   }
-    .class-card {
+    .class-card, .race-card {
       height: 15%;
       width: 100%;
       display: flex;
