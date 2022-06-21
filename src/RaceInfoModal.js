@@ -1,24 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function RaceInfoModal({ currentChar, setCurrentChar }) {
+function RaceInfoModal({
+	currentChar,
+	setCurrentChar,
+	lookingRace,
+	setLookingRace,
+}) {
 	function cancelRace() {
-		setCurrentChar({ ...currentChar, race: null });
+		setLookingRace(null);
 	}
 
-	if (currentChar.race) {
+	function setCurrentRace() {
+		setCurrentChar({ ...currentChar, race: lookingRace });
+	}
+
+	if (lookingRace) {
 		return (
 			<div className='info-modal'>
 				<section className='modal-info'>
 					<div className='modal-head-wrapper'>
-						<h3 className='modal-title'>{currentChar.race}</h3>
+						<h3 className='modal-title'>{lookingRace}</h3>
 						<button onClick={cancelRace} className='close-modal-button'>
 							X
 						</button>
 					</div>
 					<div className='modal-body-wrapper'></div>
 					<div className='modal-foot-wrapper'>
-						<Link to='/Backgrounds'>
+						<Link to='/Backgrounds' onClick={() => {
+							cancelRace();
+							setCurrentRace();
+						}}>
 							<button className='choose-button'>choose</button>
 						</Link>
 					</div>

@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ClassInfoModal from './ClassInfoModal';
 
+
 function ClassSelector({ classes, setCurrentChar, currentChar }) {
+
+	const [lookingClass, setLookingClass] = useState(null);
+
 	function handleClick(event) {
 		const link = event.target.closest('.class-card')
-		setCurrentChar({ ...currentChar, class: link.id });
+		setLookingClass( link.id );
 	}
 
 	return (
@@ -26,6 +30,8 @@ function ClassSelector({ classes, setCurrentChar, currentChar }) {
 			<ClassInfoModal
 				currentChar={currentChar}
 				setCurrentChar={setCurrentChar}
+				lookingClass={lookingClass}
+				setLookingClass={setLookingClass}
 			/>
 		</>
 	);

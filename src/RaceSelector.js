@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import RaceInfoModal from './RaceInfoModal';
 
 function RaceSelector({ races, setCurrentChar, currentChar }) {
+	const [lookingRace, setLookingRace] = useState(null);
 
 	function handleClick(event) {
 		const link = event.target.closest('.race-card');
-		setCurrentChar({ ...currentChar, race: link.id });
+		setLookingRace(link.id);
 	}
 
 	return (
@@ -26,6 +27,8 @@ function RaceSelector({ races, setCurrentChar, currentChar }) {
 			<RaceInfoModal
 				currentChar={currentChar}
 				setCurrentChar={setCurrentChar}
+				setLookingRace={setLookingRace}
+				lookingRace={lookingRace}
 			/>
 		</>
 	);
