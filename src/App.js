@@ -16,7 +16,7 @@ function App() {
 		name: '',
 		level: 1,
 		class: null,
-		race: {},
+		race: null,
 		background: {},
 	  }
 
@@ -94,7 +94,16 @@ function App() {
 								/>
 							}
 						/>
-						<Route path='/Races' element={<RaceSelector races={races} />} />
+						<Route
+							path='/Races'
+							element={
+								<RaceSelector
+									races={races}
+									setCurrentChar={setCurrentChar}
+									currentChar={currentChar}
+								/>
+							}
+						/>
 						<Route path='/Backgrounds' element={<BackgroundsSelector />} />
 						<Route path={`/${currentChar}`} element={<CurrentCharDisplay />} />
 						<Route path='/Characters' element={<AllCharsDisplay />} />
