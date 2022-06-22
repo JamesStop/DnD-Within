@@ -14,7 +14,7 @@ function App() {
   	const BASE_URL = 'https://www.dnd5eapi.co/api/'
   	const BLANK_CHAR = {
 		name: '',
-		currentLevel: 20,
+		currentLevel: 10,
 		class: null,
 		race: null,
 		background: {},

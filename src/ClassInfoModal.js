@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FeatureInfo from './FeatureInfo';
 
 function ClassInfoModal({
 	currentChar,
@@ -7,6 +8,7 @@ function ClassInfoModal({
 	setLookingClass,
 	lookingClass,
 	moreInfoClass,
+	SIMPLE_URL,
 }) {
 	function cancelClass() {
 		setLookingClass(null);
@@ -35,12 +37,20 @@ function ClassInfoModal({
 								return levels.features.length > 0;
 							})
 							.map((levels) => {
-								return (<div>
-									<h4>Level {levels.level} benefits</h4>
-									{levels.features.map((level) => {
-										return (<div>{level.index}</div>) //set up new component for url passing and fetching here
-									})}
-								</div>);
+								return (
+									<div key={levels.level}>
+										<h4>Level {levels.level} benefits</h4>
+										{levels.features.map((feature) => {
+											return (
+												<FeatureInfo
+													key={feature.index}
+													feature={feature}
+													SIMPLE_URL={SIMPLE_URL}
+												/>
+											);
+										})}
+									</div>
+								);
 							})}
 					</div>
 					<div className='modal-foot-wrapper'>

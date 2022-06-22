@@ -139,6 +139,11 @@ main {
   overflow-y: scroll;
 }
 
+.feature-names {
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
 .modal-foot-wrapper {
   border-top: 1px solid black;
   width: 100%;

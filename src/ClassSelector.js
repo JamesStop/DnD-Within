@@ -8,6 +8,7 @@ function ClassSelector({ classes, setCurrentChar, currentChar }) {
 	const [lookingClass, setLookingClass] = useState(null);
 	const [moreInfoClass, setMoreInfoClass] = useState({overview: {}, levels: []})
 
+
 	function handleClick(event) {
 		const link = event.target.closest('.class-card')
 		setLookingClass( link.id );
@@ -34,8 +35,9 @@ function ClassSelector({ classes, setCurrentChar, currentChar }) {
 		} else {
 			setMoreInfoClass({ overview: {}, levels: []});
 		}
-
 	}, [lookingClass])
+
+
 
 	return (
 		<>
@@ -58,6 +60,7 @@ function ClassSelector({ classes, setCurrentChar, currentChar }) {
 				lookingClass={lookingClass}
 				setLookingClass={setLookingClass}
 				moreInfoClass={moreInfoClass}
+				SIMPLE_URL={SIMPLE_URL}
 			/>
 		</>
 	);
