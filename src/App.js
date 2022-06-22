@@ -14,7 +14,7 @@ function App() {
   	const BASE_URL = 'https://www.dnd5eapi.co/api/'
   	const BLANK_CHAR = {
 		name: '',
-		level: 1,
+		currentLevel: 20,
 		class: null,
 		race: null,
 		background: {},
@@ -38,10 +38,7 @@ function App() {
 				setClasses(res.results);
 			});
 
-
-
-
-      const racesUrl = `${BASE_URL}races/`;
+        const racesUrl = `${BASE_URL}races/`;
 			fetch(racesUrl)
 				.then((res) => {
 					return res.json();
@@ -49,10 +46,6 @@ function App() {
 				.then((res) => {
 					setRaces(res.results);
 				});
-
-
-
-
 	}, []);
 
 
