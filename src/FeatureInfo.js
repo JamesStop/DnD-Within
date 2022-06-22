@@ -6,7 +6,7 @@ function FeatureInfo({
 	feature,
 	SIMPLE_URL,
 }) {
-	const [description, setDescription] = useState('')
+	const [description, setDescription] = useState([])
 
 	useEffect(() => {
 		fetch(`${SIMPLE_URL}${feature.url}`)
@@ -14,18 +14,28 @@ function FeatureInfo({
 				return res.json();
 			})
 			.then((res) => {
-				setDescription(res.desc[0]);
+				setDescription(res.desc);
 			});
 	}, []);
 
-	return (
-		<div>
-			<p>
-				<span className="feature-names">{feature.name}</span>
-				: {description}
-			</p>
-		</div>
-	);
+
+	if (description.length) {
+		return (
+			<div className="feature-wrapper">
+					<span className='feature-names'>{feature.name}</span>:
+					<div className='description-chunk'>
+						{description.map((description) => {
+							return (
+								<span key={`${feature.index}${description}`}>
+									{description}
+								</span>
+							);
+						})}
+					</div>
+			</div>
+		);
+	}
+	
 }
 
 export default FeatureInfo;

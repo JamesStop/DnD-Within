@@ -38,8 +38,8 @@ function ClassInfoModal({
 							})
 							.map((levels) => {
 								return (
-									<div key={levels.level}>
-										<h4>Level {levels.level} benefits</h4>
+									<div key={levels.level} className="features-levels-wrapper">
+										<h4 className="features-level-header">Level {levels.level} benefits</h4>
 										{levels.features.map((feature) => {
 											return (
 												<FeatureInfo

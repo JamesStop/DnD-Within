@@ -139,9 +139,32 @@ main {
   overflow-y: scroll;
 }
 
+.features-levels-wrapper {
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.features-level-header {
+  font-size: 20px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.feature-wrapper {
+  margin-bottom: 5px;
+}
+
 .feature-names {
   font-weight: 800;
   font-size: 1.2em;
+}
+
+.description-chunk {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin-left: 5%;
 }
 
 .modal-foot-wrapper {
