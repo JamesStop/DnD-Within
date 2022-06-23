@@ -6,6 +6,7 @@ import AllCharsDisplay from "./AllCharsDisplay";
 import RaceSelector from "./RaceSelector";
 import ClassSelector from "./ClassSelector";
 import CurrentCharDisplay from "./CurrentCharDisplay";
+import Naming from "./Naming";
 
 
 function App() {
@@ -68,7 +69,7 @@ function App() {
 			<main>
 				<nav>
 					<ul className='main-navs'>
-						<Link to='/Classes'>
+						<Link to='/Naming'>
 							<li>Character creator</li>
 						</Link>
 						<li>Characters</li>
@@ -77,6 +78,10 @@ function App() {
 				<div className='display-wrapper'>
 					<Routes>
 						<Route path='/' element={<Homepage />} />
+						<Route
+							path='/Naming'
+							element={<Naming currentChar={currentChar} setCurrentChar={setCurrentChar} />}
+						/>
 						<Route
 							path='/Classes'
 							element={
