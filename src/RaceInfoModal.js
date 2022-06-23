@@ -31,7 +31,7 @@ function RaceInfoModal({
 							<p>Ability Score bonuses:</p>
 							{lookingRaceInfo.ability_bonuses.map((ability) => {
 								return (
-									<p className='modal-tab-over'>
+									<p className='modal-tab-over' key={`${ability.ability_score.index}${ability.bonus}`}>
 										{ability.ability_score.name}: {ability.bonus}
 									</p>
 								);
@@ -43,7 +43,7 @@ function RaceInfoModal({
 					</div>
 					<div className='modal-foot-wrapper'>
 						<Link
-							to='/Character/Info'
+							to={`/Character/${currentChar.charName}`}
 							onClick={() => {
 								cancelRace();
 								setCurrentRace();
