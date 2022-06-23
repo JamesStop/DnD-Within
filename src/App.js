@@ -3,7 +3,6 @@ import './App.css'
 import { Routes, Route, Link } from 'react-router-dom'
 import Homepage from "./Homepage";
 import AllCharsDisplay from "./AllCharsDisplay";
-import BackgroundsSelector from "./BackgroundsSelector";
 import RaceSelector from "./RaceSelector";
 import ClassSelector from "./ClassSelector";
 import CurrentCharDisplay from "./CurrentCharDisplay";
@@ -100,7 +99,6 @@ function App() {
 								/>
 							}
 						/>
-						<Route path='/Backgrounds' element={<BackgroundsSelector />} />
 						<Route path={`/${currentChar}`} element={<CurrentCharDisplay />} />
 						<Route path='/Characters' element={<AllCharsDisplay />} />
 					</Routes>
