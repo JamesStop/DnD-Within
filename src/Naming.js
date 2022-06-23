@@ -6,7 +6,6 @@ function Naming({ currentChar, setCurrentChar }) {
 	function handleSubmit(event) {
 		event.preventDefault();
         setCurrentChar({ ...currentChar, charName: nameValue, currentLevel: levelValue });
-        console.log('hi');
         navigate('/Classes');
 	}
     const navigate = useNavigate();
