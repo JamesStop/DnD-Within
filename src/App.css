@@ -57,6 +57,43 @@ main {
   background-size: cover;
 }
 
+
+/* Naming page */
+
+.naming-form {
+  height: 500px;
+  width: 50%;
+  min-width: 350px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.name-input, .level-input {
+  height: 100px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.name-input {
+  width: 90%;
+}
+
+.level-input {
+  width: 100px;
+  
+}
+
+.form-submit {
+  height: 100px;
+  width: 200px;
+  font-size: 2em;
+}
+
+
 /* class page */
 
 .classes-container, .races-container {
