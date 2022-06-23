@@ -9,11 +9,11 @@ function RaceInfoModal({
 	lookingRaceInfo,
 }) {
 	function cancelRace() {
-		setLookingRace(null);
+		setLookingRace({});
 	}
 
 	function setCurrentRace() {
-		setCurrentChar({ ...currentChar, race: lookingRace });
+		setCurrentChar({ ...currentChar, race: lookingRaceInfo });
 	}
 
 	if (lookingRaceInfo) {

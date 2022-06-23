@@ -16,8 +16,8 @@ function App() {
   	const BLANK_CHAR = {
 		charName: '',
 		currentLevel: 1,
-		class: null,
-		race: null,
+		class: {},
+		race: {},
 		background: {},
 	  }
 

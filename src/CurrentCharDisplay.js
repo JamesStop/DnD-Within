@@ -10,10 +10,10 @@ function CurrentCharDisplay({currentChar}) {
 				<p className='character-level-display'>Level: {currentChar.currentLevel}</p>
                 <div className="more-info-display">
                     <section>
-                        <p>Class: {currentChar.class}</p>
+                        <p>Class: {currentChar.class.overview.name}</p>
                     </section>
                     <section>
-                        <p>Race: {currentChar.race}</p>
+                        <p>Race: {currentChar.race.name}</p>
                     </section>
                 </div>
 			</div>
