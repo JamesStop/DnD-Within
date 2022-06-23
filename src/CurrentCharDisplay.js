@@ -1,9 +1,12 @@
 import React from 'react';
 
-function CurrentCharDisplay(props) {
+function CurrentCharDisplay({currentChar}) {
+
+
+
     return (
         <div>
-            currentchar
+            {currentChar.charName}
         </div>
     );
 }

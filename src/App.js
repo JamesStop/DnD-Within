@@ -80,7 +80,12 @@ function App() {
 						<Route path='/' element={<Homepage />} />
 						<Route
 							path='/Naming'
-							element={<Naming currentChar={currentChar} setCurrentChar={setCurrentChar} />}
+							element={
+								<Naming
+									currentChar={currentChar}
+									setCurrentChar={setCurrentChar}
+								/>
+							}
 						/>
 						<Route
 							path='/Classes'
@@ -104,7 +109,10 @@ function App() {
 								/>
 							}
 						/>
-						<Route path={`/${currentChar}`} element={<CurrentCharDisplay />} />
+						<Route
+							path='/Character/:currentCharName'
+							element={<CurrentCharDisplay currentChar={currentChar} />}
+						/>
 						<Route path='/Characters' element={<AllCharsDisplay />} />
 					</Routes>
 				</div>
