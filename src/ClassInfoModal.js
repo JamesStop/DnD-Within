@@ -15,7 +15,7 @@ function ClassInfoModal({
 	}
 
 	function setCurrentClass() {
-		setCurrentChar({ ...currentChar, class: lookingClass });
+		setCurrentChar({ ...currentChar, class: moreInfoClass });
 	}
 
 	if (moreInfoClass.levels.length) {

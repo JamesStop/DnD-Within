@@ -58,6 +58,18 @@ main {
 }
 
 
+/* Homepage */
+
+.homepage-display {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 40%;
+  width: 40%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Naming page */
 
 .naming-form {
@@ -232,6 +244,111 @@ main {
   margin-bottom: 10px;
   border-bottom: 1px solid black;
 }
+
+/* character page */
+
+.character-info-display {
+  height: 90%;
+  width: 90%;
+  padding-top: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.character-name-display {
+  font-size: 2em;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.character-level-display {
+  font-size: 2em;
+  width: 100%;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.more-info-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.more-info-display{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 50%;
+}
+
+.more-info-display section {
+  width: 40%;
+  text-align: center;
+}
+
+.commit-char-button {
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 20px;
+}
+
+
+/* all chars display */
+
+.chars-container {
+  height: 75%;
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 25%);
+  gap: 12.5%;
+}
+
+.char-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  justify-content: center;
+  align-items: center;
+  max-height: 200px;
+  /* border: 1px solid black; */
+  background: url(./assets/graniteslab.jpg);
+  background-size: cover;
+  font-size: 1.5em;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 800px) {
+
+  .chars-container {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .char-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
 
 
 

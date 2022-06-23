@@ -9,11 +9,11 @@ function RaceInfoModal({
 	lookingRaceInfo,
 }) {
 	function cancelRace() {
-		setLookingRace(null);
+		setLookingRace({});
 	}
 
 	function setCurrentRace() {
-		setCurrentChar({ ...currentChar, race: lookingRace });
+		setCurrentChar({ ...currentChar, race: lookingRaceInfo });
 	}
 
 	if (lookingRaceInfo) {
@@ -43,7 +43,7 @@ function RaceInfoModal({
 					</div>
 					<div className='modal-foot-wrapper'>
 						<Link
-							to={`/Character/${currentChar.charName}`}
+							to="/Character"
 							onClick={() => {
 								cancelRace();
 								setCurrentRace();

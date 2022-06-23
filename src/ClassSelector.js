@@ -36,9 +36,7 @@ function ClassSelector({ classes, setCurrentChar, currentChar, SIMPLE_URL }) {
 						levels: data[1],
 					});
 				})
-				.catch(function (err) {
-					console.log(err);
-				});
+				
 		} else {
 			setMoreInfoClass({ overview: {}, levels: [] });
 		}
