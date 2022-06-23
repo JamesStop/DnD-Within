@@ -1,5 +1,6 @@
 import React from 'react';
 import FeatureInfo from './FeatureInfo';
+import { useNavigate } from 'react-router-dom';
 
 function CurrentCharDisplay({
 	currentChar,
@@ -11,12 +12,20 @@ function CurrentCharDisplay({
     editingMode,
     setEditingMode,
 }) {
+
+
+    const navigate = useNavigate();
+
+
 	function handleCharCommit(event) {
 		event.preventDefault();
         if (editingMode.editing) {
             setAllChars([...allChars, allChars[editingMode.index] = currentChar])
+        } else {
+            setAllChars([...allChars, currentChar])
         }
-        setAllChars([...allChars, currentChar])
+        setCurrentChar(BLANK_CHAR);
+        navigate('/Characters');
 	}
 
 	return (
