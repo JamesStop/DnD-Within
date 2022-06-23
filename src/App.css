@@ -374,4 +374,5 @@ footer {
   height: 3vh;
   min-height: 20px;
   border-top: 1px solid black;
+  text-align: center;
 }

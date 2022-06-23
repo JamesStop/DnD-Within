@@ -140,7 +140,7 @@ function App() {
 					</Routes>
 				</div>
 			</main>
-			<footer>footer</footer>
+			<footer>&copy;2022 James Stoppani</footer>
 		</div>
 	);
 }
