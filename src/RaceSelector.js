@@ -20,9 +20,7 @@ function RaceSelector({ races, setCurrentChar, currentChar, SIMPLE_URL }) {
 				.then((res) => {
 					setLookingRaceInfo(res);
 				})
-				.catch((err) => {
-					console.log(err);
-				});
+				
 		} else {
 			setLookingRaceInfo(null);
 		}
