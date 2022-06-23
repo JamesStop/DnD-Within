@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 function Naming({ currentChar, setCurrentChar }) {
 	function handleSubmit(event) {
 		event.preventDefault();
         setCurrentChar({ ...currentChar, charName: nameValue, currentLevel: levelValue });
-        console.log(currentChar)
+        console.log('hi');
+        navigate('/Classes');
 	}
-
-    const [nameValue, setNameValue] = useState('');
-    const [levelValue, setLevelValue] = useState(1);
+    const navigate = useNavigate();
+    const [nameValue, setNameValue] = useState(currentChar.charName);
+    const [levelValue, setLevelValue] = useState(currentChar.currentLevel);
 
     function handleNameChange(event) {
         setNameValue(event.target.value)
@@ -42,11 +43,9 @@ function Naming({ currentChar, setCurrentChar }) {
 				value={levelValue}
 				required
 			/>
-			<Link to='/Classes'>
-			<button className='form-submit' type='submit'>
-				Submit
-			</button>
-			</Link>
+			    <button className='form-submit' type='submit'>
+				    Submit
+			    </button>
 		</form>
 	);
 }
