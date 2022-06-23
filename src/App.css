@@ -11,12 +11,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  background: url(./assets/woodenboard.jpg);
+  background-size: cover;
 }
 
 
 h1 {
   font-size: 50px;
+  color: #ff0055;
 }
 
 main {
@@ -24,6 +26,7 @@ main {
   min-height: 500px;
   height: 87vh;
   /* border: 1px solid black; */
+  
 }
 
 
@@ -50,13 +53,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url(./assets/brickwall.jpg);
+  background-size: cover;
 }
 
 /* class page */
 
 .classes-container, .races-container {
-  height: 80%;
-  width: 80%;
+  height: 75%;
+  width: 75%;
   display: grid;
   grid-template-columns: repeat(3, 25%); 
   gap: 12.5%;
@@ -66,7 +71,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  background: url(./assets/graniteslab.jpg);
+  background-size: cover;
+  font-size: 1.5em;
 }
 
 @media screen and (max-width: 800px) {
@@ -93,7 +101,7 @@ main {
 
 .info-modal {
   position: fixed;
-  background-color: rgba(145, 12, 12, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   bottom: 0;
   right: 0;
