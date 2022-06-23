@@ -58,6 +58,18 @@ main {
 }
 
 
+/* Homepage */
+
+.homepage-display {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 40%;
+  width: 40%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Naming page */
 
 .naming-form {

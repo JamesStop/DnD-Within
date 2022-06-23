@@ -43,7 +43,7 @@ function RaceInfoModal({
 					</div>
 					<div className='modal-foot-wrapper'>
 						<Link
-							to={`/Character/${currentChar.charName}`}
+							to="/Character"
 							onClick={() => {
 								cancelRace();
 								setCurrentRace();

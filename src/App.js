@@ -18,7 +18,6 @@ function App() {
 		currentLevel: 1,
 		class: {},
 		race: {},
-		background: {},
 	  }
 
 	
@@ -112,7 +111,7 @@ function App() {
 							}
 						/>
 						<Route
-							path='/Character/:currentCharName'
+							path='/Character'
 							element={
 								<CurrentCharDisplay
 									SIMPLE_URL={SIMPLE_URL}
@@ -128,7 +127,15 @@ function App() {
 						/>
 						<Route
 							path='/Characters'
-							element={<AllCharsDisplay allChars={allChars} />}
+							element={
+								<AllCharsDisplay
+									allChars={allChars}
+									editingMode={editingMode}
+									setEditingMode={setEditingMode}
+									currentChar={currentChar}
+									setCurrentChar={setCurrentChar}
+								/>
+							}
 						/>
 					</Routes>
 				</div>
