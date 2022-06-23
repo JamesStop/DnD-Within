@@ -1,7 +1,24 @@
 import React from 'react';
 import FeatureInfo from './FeatureInfo';
 
-function CurrentCharDisplay({ currentChar, SIMPLE_URL }) {
+function CurrentCharDisplay({
+	currentChar,
+	SIMPLE_URL,
+	setCurrentChar,
+	allChars,
+	setAllChars,
+	BLANK_CHAR,
+    editingMode,
+    setEditingMode,
+}) {
+	function handleCharCommit(event) {
+		event.preventDefault();
+        if (editingMode.editing) {
+            setAllChars([...allChars, allChars[editingMode.index] = currentChar])
+        }
+        setAllChars([...allChars, currentChar])
+	}
+
 	return (
 		<div className='character-info-display'>
 			<p className='character-name-display'>{currentChar.charName}</p>
@@ -45,6 +62,9 @@ function CurrentCharDisplay({ currentChar, SIMPLE_URL }) {
 					<p>Race: {currentChar.race.name}</p>
 				</section>
 			</div>
+			<button onClick={handleCharCommit} className='commit-char-button'>
+				Commit Character
+			</button>
 		</div>
 	);
 }

@@ -21,8 +21,8 @@ function App() {
 		background: {},
 	  }
 
-
-
+	
+	const [editingMode, setEditingMode] = useState({editing: false, index: 0})
   	const [currentChar, setCurrentChar] = useState(BLANK_CHAR);
   	const [allChars, setAllChars] = useState([])
 
@@ -72,7 +72,9 @@ function App() {
 						<Link to='/Naming'>
 							<li>Character creator</li>
 						</Link>
-						<li>Characters</li>
+						<Link to='/Characters'>
+							<li>Characters</li>
+						</Link>
 					</ul>
 				</nav>
 				<div className='display-wrapper'>
@@ -115,10 +117,19 @@ function App() {
 								<CurrentCharDisplay
 									SIMPLE_URL={SIMPLE_URL}
 									currentChar={currentChar}
+									setCurrentChar={setCurrentChar}
+									allChars={allChars}
+									setAllChars={setAllChars}
+									BLANK_CHAR={BLANK_CHAR}
+									editingMode={editingMode}
+									setEditingMode={setEditingMode}
 								/>
 							}
 						/>
-						<Route path='/Characters' element={<AllCharsDisplay />} />
+						<Route
+							path='/Characters'
+							element={<AllCharsDisplay allChars={allChars} />}
+						/>
 					</Routes>
 				</div>
 			</main>
