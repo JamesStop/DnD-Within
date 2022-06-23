@@ -12,6 +12,7 @@ import CurrentCharDisplay from "./CurrentCharDisplay";
 function App() {
 
   	const BASE_URL = 'https://www.dnd5eapi.co/api/'
+	const SIMPLE_URL = 'https://www.dnd5eapi.co';
   	const BLANK_CHAR = {
 		name: '',
 		currentLevel: 10,
@@ -84,6 +85,7 @@ function App() {
 									classes={classes}
 									setCurrentChar={setCurrentChar}
 									currentChar={currentChar}
+									SIMPLE_URL={SIMPLE_URL}
 								/>
 							}
 						/>
@@ -94,6 +96,7 @@ function App() {
 									races={races}
 									setCurrentChar={setCurrentChar}
 									currentChar={currentChar}
+									SIMPLE_URL={SIMPLE_URL}
 								/>
 							}
 						/>

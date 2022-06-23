@@ -88,6 +88,9 @@ main {
      }
 }
 
+
+/* modal styling */
+
 .info-modal {
   position: fixed;
   background-color: rgba(145, 12, 12, 0.5);
@@ -160,7 +163,7 @@ main {
   font-size: 1.2em;
 }
 
-.description-chunk {
+.description-chunk, .modal-tab-over {
   display: flex;
   flex-direction: column;
   width: 95%;
@@ -180,7 +183,10 @@ main {
   border: none;
 }
 
-
+.ability-bonuses {
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
 
 
 

@@ -6,6 +6,7 @@ function RaceInfoModal({
 	setCurrentChar,
 	lookingRace,
 	setLookingRace,
+	lookingRaceInfo,
 }) {
 	function cancelRace() {
 		setLookingRace(null);
@@ -15,22 +16,38 @@ function RaceInfoModal({
 		setCurrentChar({ ...currentChar, race: lookingRace });
 	}
 
-	if (lookingRace) {
+	if (lookingRaceInfo) {
 		return (
 			<div className='info-modal'>
 				<section className='modal-info'>
 					<div className='modal-head-wrapper'>
-						<h3 className='modal-title'>{lookingRace}</h3>
+						<h3 className='modal-title'>{lookingRaceInfo.name}</h3>
 						<button onClick={cancelRace} className='close-modal-button'>
 							X
 						</button>
 					</div>
-					<div className='modal-body-wrapper'></div>
+					<div className='modal-body-wrapper'>
+						<section className="ability-bonuses">
+							<p>Ability Score bonuses:</p>
+							{lookingRaceInfo.ability_bonuses.map((ability) => {
+								return (
+									<p className='modal-tab-over'>
+										{ability.ability_score.name}: {ability.bonus}
+									</p>
+								);
+							})}
+						</section>
+
+						<p>{lookingRaceInfo.age}</p>
+						<p>{lookingRaceInfo.language_desc}</p>
+					</div>
 					<div className='modal-foot-wrapper'>
-						<Link to='/Backgrounds' onClick={() => {
-							cancelRace();
-							setCurrentRace();
-						}}>
+						<Link
+							to='/Backgrounds'
+							onClick={() => {
+								cancelRace();
+								setCurrentRace();
+							}}>
 							<button className='choose-button'>choose</button>
 						</Link>
 					</div>

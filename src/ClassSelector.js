@@ -3,18 +3,19 @@ import { Link } from 'react-router-dom';
 import ClassInfoModal from './ClassInfoModal';
 
 
-function ClassSelector({ classes, setCurrentChar, currentChar }) {
-
+function ClassSelector({ classes, setCurrentChar, currentChar, SIMPLE_URL }) {
 	const [lookingClass, setLookingClass] = useState(null);
-	const [moreInfoClass, setMoreInfoClass] = useState({overview: {}, levels: []})
-
+	const [moreInfoClass, setMoreInfoClass] = useState({
+		overview: {},
+		levels: [],
+	});
 
 	function handleClick(event) {
-		const link = event.target.closest('.class-card')
-		setLookingClass( link.id );
+		const link = event.target.closest('.class-card');
+		setLookingClass(link.id);
 	}
 
-	const SIMPLE_URL = 'https://www.dnd5eapi.co'
+	
 
 	useEffect(() => {
 		if (lookingClass) {
@@ -22,22 +23,26 @@ function ClassSelector({ classes, setCurrentChar, currentChar }) {
 			const classLevelsUrl = `${SIMPLE_URL}/api/classes/${lookingClass}/levels`;
 			Promise.all([fetch(classUrl), fetch(classLevelsUrl)])
 				.then(function (responses) {
-					return Promise.all(responses.map(function (response) {
-						return response.json();
-					}));
+					return Promise.all(
+						responses.map(function (response) {
+							return response.json();
+						})
+					);
 				})
 				.then(function (data) {
-					setMoreInfoClass({...moreInfoClass, overview: data[0], levels: data[1]})
+					setMoreInfoClass({
+						...moreInfoClass,
+						overview: data[0],
+						levels: data[1],
+					});
 				})
 				.catch(function (err) {
-					console.log(err)
-				})
+					console.log(err);
+				});
 		} else {
-			setMoreInfoClass({ overview: {}, levels: []});
+			setMoreInfoClass({ overview: {}, levels: [] });
 		}
-	}, [lookingClass])
-
-
+	}, [lookingClass]);
 
 	return (
 		<>

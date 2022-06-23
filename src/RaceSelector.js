@@ -1,13 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import RaceInfoModal from './RaceInfoModal';
 
-function RaceSelector({ races, setCurrentChar, currentChar }) {
+function RaceSelector({ races, setCurrentChar, currentChar, SIMPLE_URL }) {
 	const [lookingRace, setLookingRace] = useState(null);
+	const [lookingRaceInfo, setLookingRaceInfo] = useState(null);
 
 	function handleClick(event) {
 		const link = event.target.closest('.race-card');
 		setLookingRace(link.id);
 	}
+
+	useEffect(() => {
+		if (lookingRace) {
+			const raceUrl = `${SIMPLE_URL}/api/races/${lookingRace}`;
+			fetch(raceUrl)
+				.then((res) => {
+					return res.json();
+				})
+				.then((res) => {
+					setLookingRaceInfo(res);
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+		} else {
+			setLookingRaceInfo(null);
+		}
+	}, [lookingRace]);
 
 	return (
 		<>
@@ -29,6 +48,7 @@ function RaceSelector({ races, setCurrentChar, currentChar }) {
 				setCurrentChar={setCurrentChar}
 				setLookingRace={setLookingRace}
 				lookingRace={lookingRace}
+				lookingRaceInfo={lookingRaceInfo}
 			/>
 		</>
 	);
