@@ -27,23 +27,28 @@ function RaceInfoModal({
 						</button>
 					</div>
 					<div className='modal-body-wrapper'>
-						<section className="ability-bonuses">
+						<section className='ability-bonuses'>
 							<p>Ability Score bonuses:</p>
 							{lookingRaceInfo.ability_bonuses.map((ability) => {
 								return (
-									<p className='modal-tab-over' key={`${ability.ability_score.index}${ability.bonus}`}>
+									<p
+										className='modal-tab-over'
+										key={`${ability.ability_score.index}${ability.bonus}`}>
 										{ability.ability_score.name}: {ability.bonus}
 									</p>
 								);
 							})}
 						</section>
-
-						<p>{lookingRaceInfo.age}</p>
-						<p>{lookingRaceInfo.language_desc}</p>
+						<section className='races-info-chunk'>
+							<p>{lookingRaceInfo.age}</p>
+						</section>
+						<section className='races-info-chunk'>
+							<p>{lookingRaceInfo.language_desc}</p>
+						</section>
 					</div>
 					<div className='modal-foot-wrapper'>
 						<Link
-							to="/Character"
+							to='/Character'
 							onClick={() => {
 								cancelRace();
 								setCurrentRace();

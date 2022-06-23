@@ -245,6 +245,11 @@ main {
   border-bottom: 1px solid black;
 }
 
+.races-info-chunk {
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
 /* character page */
 
 .character-info-display {
@@ -288,7 +293,7 @@ main {
 }
 
 .more-info-display section {
-  width: 40%;
+  width: 45%;
   text-align: center;
 }
 
@@ -369,4 +374,5 @@ footer {
   height: 3vh;
   min-height: 20px;
   border-top: 1px solid black;
+  text-align: center;
 }
