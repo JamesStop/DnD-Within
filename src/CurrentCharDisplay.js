@@ -72,7 +72,27 @@ function CurrentCharDisplay({
 								</div>
 							</section>
 							<section>
-								<p>Race: {currentChar.race.name}</p>
+								<p className='more-info-title'>Race: {currentChar.race.name}</p>
+								<div className='modal-body-wrapper'>
+									<div className='ability-bonuses'>
+										<p>Ability Score bonuses:</p>
+										{currentChar.race.ability_bonuses.map((ability) => {
+											return (
+												<p
+													className='modal-tab-over'
+													key={`${ability.ability_score.index}${ability.bonus}`}>
+													{ability.ability_score.name}: {ability.bonus}
+												</p>
+											);
+										})}
+									</div>
+									<div className='races-info-chunk'>
+										<p>{currentChar.race.age}</p>
+									</div>
+									<div className='races-info-chunk'>
+										<p>{currentChar.race.language_desc}</p>
+									</div>
+								</div>
 							</section>
 						</div>
 						<button onClick={handleCharCommit} className='commit-char-button'>
