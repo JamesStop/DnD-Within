@@ -233,12 +233,44 @@ main {
   border-bottom: 1px solid black;
 }
 
+/* character page */
 
+.character-info-display {
+  height: 90%;
+  width: 90%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow-y: scroll;
+}
 
+.character-name-display {
+  font-size: 2em;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
 
+.character-level-display {
+  font-size: 2em;
+  width: 100%;
+  margin-bottom: 10%;
+  text-align: center;
+}
 
+.more-info-display{
+  width: 100%;
+  display: flex;
+}
 
-
+.character-info-display section {
+  width: 100%;
+  text-align: center;
+}
 
 
 
