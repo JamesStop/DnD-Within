@@ -1,0 +1,29 @@
+-index
+-Router
+    -App (states: currentChar, allChars)
+        -Header
+            -h1 title "DnD Within"
+            -right side profile (click to go to list of characters)
+        -Main section
+            -Routes
+                -Homepage
+                    -says something about make a new char with a Link to beginning of making
+                -Making
+                    -Nav bar
+                        -Unlock each section as you complete for going back (same as below routes)
+                    -Routes
+                        -Class + level
+                            -display all classes based on api
+                            -submit to commit to currentChar state and then move on to next section
+                            -each section follows this pattern
+                            -(bonus make so each can be edited)
+                        -Race
+                        -Background
+                        -Ability Scores (stretch)
+                        -Level + Proficiencies (stretch)
+                        -Spells (stretch)
+                        -(last section brings to current character display)
+                -Current Character Display
+                    -once done show character card with information
+                -MultiCharacter Display
+                    -Allows to see all characters made
