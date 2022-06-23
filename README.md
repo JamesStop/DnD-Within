@@ -19,10 +19,10 @@ The site is hosted on Netlify.
 
 For this project, I approached it with a few ambitious wireframes that I later decided had a few too many functionalities that just weren't reasonable for the time frame and current requirements of the project:
 
-![wireframe1](assets/wireframes/wireframe1.png)
-![wireframe2](assets/wireframes/wireframe2.png)
-![wireframe3](assets/wireframes/wireframe3.png)
-![wireframe4](assets/wireframes/wireframe4.png)
+![wireframe1](src/assets/wireframes/wireframe1.png)
+![wireframe2](src/assets/wireframes/wireframe2.png)
+![wireframe3](src/assets/wireframes/wireframe3.png)
+![wireframe4](src/assets/wireframes/wireframe4.png)
 
 The first wireframe highlights a general look at what the page would be when first opened. Removed the profile section from the final product as it wasn't a good fit for scope and wouldn't work well with the technologies I had available to me at time of building.
 
