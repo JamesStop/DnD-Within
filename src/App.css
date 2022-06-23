@@ -263,13 +263,20 @@ main {
   text-align: center;
 }
 
+.more-info-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
 .more-info-display{
   width: 100%;
   display: flex;
+  justify-content: space-around;
+  height: 50%;
 }
 
-.character-info-display section {
-  width: 100%;
+.more-info-display section {
+  width: 40%;
   text-align: center;
 }
 

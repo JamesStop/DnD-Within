@@ -111,7 +111,12 @@ function App() {
 						/>
 						<Route
 							path='/Character/:currentCharName'
-							element={<CurrentCharDisplay currentChar={currentChar} />}
+							element={
+								<CurrentCharDisplay
+									SIMPLE_URL={SIMPLE_URL}
+									currentChar={currentChar}
+								/>
+							}
 						/>
 						<Route path='/Characters' element={<AllCharsDisplay />} />
 					</Routes>
