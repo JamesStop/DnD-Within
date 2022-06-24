@@ -1,6 +1,10 @@
 # DnD Within
 
 
+![PageView](src/assets/pageview.png)
+
+
+
 ## Technologies Used:
     
 The site is programmed using HTML, CSS, Javascript utilizing React, React Router, and API calling.
