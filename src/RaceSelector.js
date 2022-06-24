@@ -45,7 +45,6 @@ function RaceSelector({ races, setCurrentChar, currentChar, SIMPLE_URL }) {
 				currentChar={currentChar}
 				setCurrentChar={setCurrentChar}
 				setLookingRace={setLookingRace}
-				lookingRace={lookingRace}
 				lookingRaceInfo={lookingRaceInfo}
 			/>
 		</>

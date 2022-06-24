@@ -60,7 +60,6 @@ function ClassSelector({ classes, setCurrentChar, currentChar, SIMPLE_URL }) {
 			<ClassInfoModal
 				currentChar={currentChar}
 				setCurrentChar={setCurrentChar}
-				lookingClass={lookingClass}
 				setLookingClass={setLookingClass}
 				moreInfoClass={moreInfoClass}
 				SIMPLE_URL={SIMPLE_URL}

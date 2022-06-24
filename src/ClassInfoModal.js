@@ -6,7 +6,6 @@ function ClassInfoModal({
 	currentChar,
 	setCurrentChar,
 	setLookingClass,
-	lookingClass,
 	moreInfoClass,
 	SIMPLE_URL,
 }) {

@@ -131,9 +131,7 @@ function App() {
 							element={
 								<AllCharsDisplay
 									allChars={allChars}
-									editingMode={editingMode}
 									setEditingMode={setEditingMode}
-									currentChar={currentChar}
 									setCurrentChar={setCurrentChar}
 								/>
 							}
