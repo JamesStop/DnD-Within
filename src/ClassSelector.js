@@ -42,31 +42,44 @@ function ClassSelector({ classes, setCurrentChar, currentChar, SIMPLE_URL }) {
 		}
 	}, [lookingClass]);
 
-	return (
-		<>
-			<div className='classes-container'>
-				{classes.map((singleClass) => {
-					return (
-						<div
-							className='class-card'
-							key={singleClass.index}
-							id={singleClass.index}
-							onClick={handleClick}>
-							<span>{singleClass.name}</span>
-						</div>
-					);
-				})}
+
+	if (classes) {
+		return (
+			<>
+				<div className='classes-container'>
+					{classes.map((singleClass) => {
+						return (
+							<div
+								className='class-card'
+								key={singleClass.index}
+								id={singleClass.index}
+								onClick={handleClick}>
+								<span>{singleClass.name}</span>
+							</div>
+						);
+					})}
+				</div>
+				<ClassInfoModal
+					currentChar={currentChar}
+					setCurrentChar={setCurrentChar}
+					setLookingClass={setLookingClass}
+					moreInfoClass={moreInfoClass}
+					SIMPLE_URL={SIMPLE_URL}
+				/>
+			</>
+		);
+	} else {
+		return (
+			<div className='homepage-display'>
+				Something went wrong with looking through our compendium of available
+				classes. Please return to the home page (by clicking the title at the
+				top of the page) and refresh to start over. If this issue persists,
+				please try again later as the compendium may be checked out by another
+				scholar already.
 			</div>
-			<ClassInfoModal
-				currentChar={currentChar}
-				setCurrentChar={setCurrentChar}
-				lookingClass={lookingClass}
-				setLookingClass={setLookingClass}
-				moreInfoClass={moreInfoClass}
-				SIMPLE_URL={SIMPLE_URL}
-			/>
-		</>
-	);
+		);
+	}
+	
 }
 
 export default ClassSelector;

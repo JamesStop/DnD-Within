@@ -36,7 +36,9 @@ function App() {
 			})
 			.then((res) => {
 				setClasses(res.results);
-			});
+				console.log(classes)
+			})
+			
 
         const racesUrl = `${BASE_URL}races/`;
 			fetch(racesUrl)
@@ -130,9 +132,7 @@ function App() {
 							element={
 								<AllCharsDisplay
 									allChars={allChars}
-									editingMode={editingMode}
 									setEditingMode={setEditingMode}
-									currentChar={currentChar}
 									setCurrentChar={setCurrentChar}
 								/>
 							}

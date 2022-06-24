@@ -120,7 +120,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   background: url(./assets/graniteslab.jpg);
   background-size: cover;
   font-size: 1.5em;
@@ -321,11 +321,10 @@ main {
   justify-content: center;
   align-items: center;
   max-height: 200px;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   background: url(./assets/graniteslab.jpg);
   background-size: cover;
   font-size: 1.5em;
-  border: 1px solid black;
 }
 
 @media screen and (max-width: 800px) {

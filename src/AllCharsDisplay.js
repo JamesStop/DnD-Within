@@ -3,9 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 function AllCharsDisplay({
 	allChars,
-	editingMode,
 	setEditingMode,
-	currentChar,
 	setCurrentChar,
 }) {
 
