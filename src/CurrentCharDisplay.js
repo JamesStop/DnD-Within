@@ -29,7 +29,7 @@ function CurrentCharDisplay({
         navigate('/Characters');
 	}
 
-    if (currentChar.charName.length > 0) {
+    if (currentChar.charName.length > 0 && currentChar.class.levels && currentChar.class.overview && currentChar.race.index.length > 0) {
         return (
 					<div className='character-info-display'>
 						<p className='character-name-display'>{currentChar.charName}</p>
@@ -102,7 +102,7 @@ function CurrentCharDisplay({
 				);
     } else {
         return (
-            <div className="homepage-display">Uh Oh! Your character has run away. Please make another in the character creator navigation tab above and try again.</div>
+            <div className="homepage-display">Uh Oh! There were 1 or more problems with your character. Please make another in the character creator navigation tab above and try again.</div>
         )
     }
 

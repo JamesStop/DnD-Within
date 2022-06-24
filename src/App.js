@@ -36,7 +36,8 @@ function App() {
 			})
 			.then((res) => {
 				setClasses(res.results);
-			});
+			})
+			
 
         const racesUrl = `${BASE_URL}races/`;
 			fetch(racesUrl)
