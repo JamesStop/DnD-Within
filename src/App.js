@@ -36,7 +36,6 @@ function App() {
 			})
 			.then((res) => {
 				setClasses(res.results);
-				console.log(classes)
 			})
 			
 
