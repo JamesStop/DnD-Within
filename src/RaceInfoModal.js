@@ -8,7 +8,7 @@ function RaceInfoModal({
 	lookingRaceInfo,
 }) {
 	function cancelRace() {
-		setLookingRace({});
+		setLookingRace(null);
 	}
 
 	function setCurrentRace() {
